@@ -1,0 +1,3 @@
+import { Router } from "express";
+import products from "./products.routes.js"; import users from "./users.routes.js"; import orders from "./orders.routes.js"; import deliveries from "./deliveries.routes.js"; import mocks from "./mocks.routes.js"; import logger from "./logger.routes.js"; import health from "./health.routes.js";
+const r=Router(); r.get("/",(req,res)=>res.json({success:true,message:"Bienvenido a ShipNow API"})); r.use("/products",products);r.use("/users",users);r.use("/orders",orders);r.use("/deliveries",deliveries);r.use("/mocks",mocks);r.use("/logger",logger);r.use("/health",health);export default r;

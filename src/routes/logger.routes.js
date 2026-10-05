@@ -1,0 +1,1 @@
+import { Router } from "express"; import c from "../controllers/logger.controller.js"; import internalOnly from "../middlewares/internalOnly.js"; const r=Router();r.use(internalOnly);r.get("/test",c.test);export default r;
